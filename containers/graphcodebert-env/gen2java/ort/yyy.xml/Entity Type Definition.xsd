@@ -1,0 +1,114 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="title" type="xsd:string" />
+	<xsd:element name="modelname" type="xsd:string" />
+	<xsd:element name="subset" type="xsd:string" />
+	<xsd:element name="datetime" type="xsd:string" />
+	<xsd:element name="DESC" type="xsd:string"  minOccurs="0" maxOccurs="unbounded"/>
+	<xsd:element name="THLENT" type="EntityType" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="THLENTDS" type="EntityType" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:attribute name="NAME" type="xsd:string" />
+	<xsd:attribute name="MINOCC" type="xsd:string" />
+	<xsd:attribute name="MAXOCC" type="xsd:string" />
+	<xsd:attribute name="AVGOCC" type="xsd:string" />
+	<xsd:attribute name="PCTGRW" type="xsd:string" />
+	<xsd:attribute name="GRWUNT" type="xsd:string" />
+	<xsd:attribute name="BASDER" type="xsd:string" />
+	<xsd:attribute name="CATEGORY" type="xsd:string" />
+	<xsd:attribute name="NOINSTCS" type="xsd:string" />
+	<xsd:attribute name="OOTYPE" type="xsd:string" />
+	<xsd:attribute name="DSDNAME" type="xsd:string" />
+	<xsd:attribute name="DOMAN" type="xsd:string" />
+	<xsd:attribute name="LEN" type="xsd:string" />
+	<xsd:attribute name="DECPLC" type="xsd:string" />
+	<xsd:attribute name="OPT" type="xsd:string" />
+	<xsd:attribute name="VARLEN" type="xsd:string" />
+	<xsd:attribute name="DENTY" type="xsd:string" />
+	<xsd:attribute name="OPT" type="xsd:string" />
+	<xsd:attribute name="CARD" type="xsd:string" />
+	<xsd:attribute name="CASCADE" type="xsd:string" />
+	<xsd:attribute name="DSCPR" type="xsd:string" />
+	<xsd:attribute name="PCTOPT" type="xsd:string" />
+	<xsd:attribute name="TRANSF" type="xsd:string" />
+	<xsd:attribute name="RMDESC" type="xsd:string" />
+	<xsd:attribute name="EXPMIN" type="xsd:string" />
+	<xsd:attribute name="EXPMAX" type="xsd:string" />
+	<xsd:attribute name="EXPAVG" type="xsd:string" />
+	<xsd:attribute name="EXPMINX" type="xsd:string" />
+	<xsd:attribute name="EXPMAXX" type="xsd:string" />
+	<xsd:attribute name="MODORREF" type="xsd:string" />
+	<xsd:attribute name="DISPLAD" type="xsd:string" />
+	<xsd:attribute name="ENCPSLVL" type="xsd:string" />
+	<xsd:attribute name="PRIMARY" type="xsd:string" />
+	<xsd:complexType name="EntityType">
+		<xsd:attribute ref="NAME" />
+		<xsd:attribute ref="MINOCC" />
+		<xsd:attribute ref="MAXOCC" />
+		<xsd:attribute ref="AVGOCC" />
+		<xsd:attribute ref="PCTGRW" />
+		<xsd:attribute ref="GRWUNT" />
+		<xsd:attribute ref="BASDER" />
+		<xsd:attribute ref="CATEGORY" />
+		<xsd:attribute ref="NOINSTCS" />
+		<xsd:attribute ref="OOTYPE" />
+		<xsd:attribute ref="DSDNAME" />
+		<xsd:all>
+			<xsd:element ref="DESC"/>
+			<xsd:element name="TSUBJ" type="typeSubject" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="DATTR" type="divisionAttribute" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="TRELMM" type="typeSourceRelationship" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="TIDENT" type="typeIdentifier" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="typeSubject">
+		<xsd:attribute name="NAME" type="xsd:string" />
+	</xsd:complexType>
+	<xsd:complexType name="divisionAtrribute">
+		<xsd:sequence>
+			<xsd:element name="TATTRUSR" type="typeAttrusr" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="typeAttrusr">
+		<xsd:attribute ref="NAME" />
+		<xsd:attribute ref="DOMAN" />
+		<xsd:attribute ref="LEN" />
+		<xsd:attribute ref="DECPLC" />
+		<xsd:attribute ref="OPT" />
+		<xsd:attribute ref="BASDER" />
+		<xsd:attribute ref="VARLEN" />
+	</xsd:complexType>
+	<xsd:complexType name="typeRelationship">
+		<xsd:attribute ref="NAME" />
+		<xsd:attribute ref="DENTY" />
+		<xsd:attribute ref="OPT" />
+		<xsd:attribute ref="CARD" />
+		<xsd:attribute ref="CASCADE" />
+		<xsd:attribute ref="DSCPR" />
+		<xsd:attribute ref="PCTOPT" />
+		<xsd:attribute ref="TRANSF" />
+		<xsd:attribute ref="RMDESC" />
+		<xsd:attribute ref="EXPMIN" />
+		<xsd:attribute ref="EXPMAX" />
+		<xsd:attribute ref="EXPAVG" />
+		<xsd:attribute ref="EXPMINX" />
+		<xsd:attribute ref="EXPMAXX" />
+		<xsd:attribute ref="MODORREF" />
+		<xsd:attribute ref="DISPLAD" />
+		<xsd:attribute ref="ENCPSLVL" />
+		<xsd:attribute ref="BASDER" />
+		<xsd:sequence>
+			<xsd:element name="INVERSE" type="associationInverse" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="associationInverse">
+		<xsd:sequence>
+			<xsd:element ref="TRELMM" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="typeIdentifier">
+		<xsd:attribute ref="NAME" />
+		<xsd:attribute ref="PRIMARY" />
+		<xsd:sequence>
+			<xsd:element ref="TATTRUSR" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

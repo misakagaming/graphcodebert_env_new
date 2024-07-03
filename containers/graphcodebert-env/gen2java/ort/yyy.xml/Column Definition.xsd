@@ -1,0 +1,61 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="title" type="xsd:string" />
+	<xsd:element name="modelname" type="xsd:string" />
+	<xsd:element name="subset" type="xsd:string" />
+	<xsd:element name="datetime" type="xsd:string" />
+	<xsd:element name="LONGNAME" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="DESC" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="THLENT" type="typeHighLevelEntity" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="THLENTDS" type="typeHighLevelEntity" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TATTRUSR" type="typeUserDefineAttribute" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="IMPLNTBY" type="associationImplementedBy" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TFLDEPUS" type="typeFieldEntryPointUsage" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:attribute name="NAME" type="xsd:string" />
+	<xsd:attribute name="DFIELD" type="xsd:string" />
+	<xsd:attribute name="DRECDATA" type="xsd:string" />
+	<xsd:attribute name="DBMS" type="xsd:string" />
+	<xsd:attribute name="DFIELDDB" type="xsd:string" />
+	<xsd:attribute name="DRECDATADB" type="xsd:string" />
+	<xsd:attribute name="FORMAT" type="xsd:string" />
+	<xsd:attribute name="LENGTH" type="xsd:string" />
+	<xsd:attribute name="UNITS" type="xsd:string" />
+	<xsd:attribute name="DECPLCFL" type="xsd:string" />
+	<xsd:attribute name="OPTDB2" type="xsd:string" />
+	<xsd:attribute name="ROLEFLD" type="xsd:string" />
+	<xsd:attribute name="TIDENT" type="xsd:string" />
+	<xsd:attribute name="FIELDPRC" type="xsd:string" />
+	<xsd:attribute name="PARMS" type="xsd:string" />
+	<xsd:complexType name="typeHighLevelEntity">
+		<xsd:attribute ref="NAME" />
+		<xsd:all>
+			<xsd:element ref="TATTRUSR" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="typeUserDefineAttribute">
+		<xsd:attribute ref="NAME" />
+		<xsd:all>
+			<xsd:element ref="IMPLNTBY" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="associationImplementedBy">
+		<xsd:attribute ref="DFIELD" />
+		<xsd:attribute ref="DRECDATA" />
+		<xsd:attribute ref="DBMS" />
+		<xsd:attribute ref="DFIELDDB" />
+		<xsd:attribute ref="DRECDATADB" />
+		<xsd:attribute ref="FORMAT" />
+		<xsd:attribute ref="LENGTH" />
+		<xsd:attribute ref="DECPLCFL" />
+		<xsd:attribute ref="OPTDB2" />
+		<xsd:attribute ref="ROLEFLD" />
+		<xsd:attribute ref="TIDENT" />
+		<xsd:attribute ref="FIELDPRC" />
+		<xsd:attribute ref="PARMS" />
+		<xsd:all>
+			<xsd:element ref="TFLDEPUS" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="typeFieldEntryPointUsage">
+		<xsd:attribute ref="NAME" />
+	</xsd:complexType>
+</xsd:schema>

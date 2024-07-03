@@ -1,0 +1,18 @@
+WLa.LocImpErrorIyy1ComponentSeverityCode = FixedStringAttr.ValueOf(WLa.LocErrorIyy1ComponentSeverityCode, 1);
+WLa.LocImpErrorIyy1ComponentRollbackIndicator = FixedStringAttr.ValueOf(WLa.LocErrorIyy1ComponentRollbackIndicator, 1);
+WLa.LocImpErrorIyy1ComponentImplementationId = DoubleAttr.ValueOf(Cyyy9051Oa.ExpIdentifiersIyy1ComponentImplementationId);
+Globdata.GetStateData().SetLastStatementNumber( "0000000012" );
+Globdata.GetStateData().SetLastStatementNumber( "0000000026" );
+if ( CompareExit.CompareTo(WLa.LocErrorMsgIyy1ComponentSeverityCode, Spaces) <= 0 )
+{Globdata.GetStateData().SetLastStatementNumber( "0000000027" );
+WLa.LocErrorMsgIyy1ComponentSeverityCode = FixedStringAttr.ValueOf(WLa.LocImpErrorIyy1ComponentSeverityCode, 1);}
+Globdata.GetStateData().SetLastStatementNumber( "0000000030" );
+Globdata.GetStateData().SetLastStatementNumber( "0000000005" );
+WLa.LocDontChangeReturnCodesQ1Ok = IntAttr.ValueOf((int)TIRD2DEC.Execute1(1, 0, TIRD2DEC.ROUND_NONE, 5));
+Globdata.GetStateData().SetLastStatementNumber( "0000000008" );
+Cyyy9041Ia = (GEN.ORT.YYY.CYYY9041_IA)(IefRuntimeParm2.GetInstance( typeof(GEN.ORT.YYY.CYYY9041).Assembly, "GEN.ORT.YYY.CYYY9041_IA" ));
+Cyyy9041Oa = (GEN.ORT.YYY.CYYY9041_OA)(IefRuntimeParm2.GetInstance( typeof(GEN.ORT.YYY.CYYY9041).Assembly, "GEN.ORT.YYY.CYYY9041_OA" ));
+Cyyy9041Ia.ImpErrorIyy1ComponentOriginServid = DoubleAttr.ValueOf(WLa.LocImpErrorIyy1ComponentOriginServid);
+Cyyy9041Ia.ImpErrorIyy1ComponentContextString = StringAttr.ValueOf(WLa.LocImpErrorIyy1ComponentContextString, 512);
+Cyyy9041Ia.ImpErrorIyy1ComponentReturnCode = IntAttr.ValueOf(WLa.LocImpErrorIyy1ComponentReturnCode);
+

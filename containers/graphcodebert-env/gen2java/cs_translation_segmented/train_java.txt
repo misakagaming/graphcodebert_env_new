@@ -1,0 +1,129 @@
+public void CYY1A121( Object in_runtime_parm1, 
+IRuntimePStepContext in_runtime_parm2, 
+GlobData in_globdata, 
+CYY1A121_IA import_view, 
+CYY1A121_OA export_view )
+{iefRuntimeParm1 = in_runtime_parm1;
+iefRuntimeParm2 = in_runtime_parm2;
+globdata = in_globdata;
+w_ia = import_view;
+w_oa = export_view;
+_CYY1A121();}
+private void _CYY1A121(){
+f_22020239_localAlloc("CYY1A121_SERVER_TERMINATION");
+if ( globdata.getErrorData().getLastStatus() == ErrorData.IEF_ALLOCATION_ERROR_FL_LS )
+return;
+++(nestingLevel);
+try {
+f_22020239_init();
+f_22020239();}
+catch( ABException e ) {    } finally {      --(nestingLevel);    }    String last_stmt_num_saved = globdata.getStateData().getLastStatementNumber();    globdata.getStateData().setLastStatementNumber( "9999999999" );    try {      f_0_trace();    } catch( ABException e ) {    }    globdata.getStateData().setLastStatementNumber( last_stmt_num_saved );  }
+public void f_22020239() throws ABException
+{func_0022020239_esc_flag = false;
+globdata.getStateData().setCurrentABId( "0022020239" );
+globdata.getStateData().setCurrentABName( "CYY1A121_SERVER_TERMINATION" );
+w_la.LocImpErrorIyy1ComponentOriginServid = DoubleAttr.valueOf(w_ia.ImpErrorIyy1ComponentOriginServid);
+w_la.LocImpErrorIyy1ComponentContextString = StringAttr.valueOf(w_ia.ImpErrorIyy1ComponentContextString, (short)512);
+w_la.LocImpErrorIyy1ComponentReturnCode = IntAttr.valueOf(w_ia.ImpErrorIyy1ComponentReturnCode);
+w_la.LocImpErrorIyy1ComponentReasonCode = IntAttr.valueOf(w_ia.ImpErrorIyy1ComponentReasonCode);
+w_la.LocImpErrorIyy1ComponentChecksum = FixedStringAttr.valueOf(w_ia.ImpErrorIyy1ComponentChecksum, (short)15);}
+globdata.getStateData().setLastStatementNumber( "0000000011" );
+f_0_trace(); if ( trace_ret_code != 8 ){cyyy9051_oa = (gen.ort.yyy.CYYY9051_OA)(iefRuntimeParm2.getInstance("gen.ort.yyy.CYYY9051_OA"));
+globdata.getErrorData().setErrorEncounteredSW( ErrorData.NO_ERROR_FOUND_SW );
+iefRuntimeParm2.useActionBlock("gen.ort.yyy.CYYY9051", "CYYY9051", null, cyyy9051_oa);
+if ( ((!(globdata.getErrorData().getStatus().equals( ErrorData.NONE_SF ))) || (globdata.getErrorData().getErrorEncounteredSW() != ErrorData.NO_ERROR_FOUND_SW)) || (globdata.getErrorData().getViewOverflowSW() != ErrorData.NO_ERROR_FOUND_SW) )
+{throw new ABException();}
+globdata.getStateData().setCurrentABId( "0022020239" );
+globdata.getStateData().setCurrentABName( "CYY1A121_SERVER_TERMINATION" );
+globdata.getStateData().setLastStatementNumber( "0000000011" );
+w_la.LocErrorIyy1ComponentSeverityCode = FixedStringAttr.valueOf(cyyy9051_oa.ExpErrorIyy1ComponentSeverityCode, (short)1);
+w_la.LocErrorIyy1ComponentRollbackIndicator = FixedStringAttr.valueOf(cyyy9051_oa.ExpErrorIyy1ComponentRollbackIndicator, (short)1);
+w_la.LocErrorIyy1ComponentOriginServid = DoubleAttr.valueOf(cyyy9051_oa.ExpErrorIyy1ComponentOriginServid);
+w_la.LocErrorIyy1ComponentContextString = StringAttr.valueOf(cyyy9051_oa.ExpErrorIyy1ComponentContextString, (short)512);
+w_la.LocErrorIyy1ComponentReturnCode = IntAttr.valueOf(cyyy9051_oa.ExpErrorIyy1ComponentReturnCode);
+f_0_trace(); if ( trace_ret_code != 8 ){if ( ((double) w_la.LocErrorIyy1ComponentReturnCode < (double) w_la.LocDontChangeReturnCodesQ1Ok) )
+{globdata.getStateData().setLastStatementNumber( "0000000013" );
+f_0_trace(); if ( trace_ret_code != 8 ){w_la.LocImpErrorIyy1ComponentSeverityCode = FixedStringAttr.valueOf(w_la.LocErrorIyy1ComponentSeverityCode, (short)1);
+w_la.LocImpErrorIyy1ComponentRollbackIndicator = FixedStringAttr.valueOf(w_la.LocErrorIyy1ComponentRollbackIndicator, (short)1);
+w_la.LocImpErrorIyy1ComponentOriginServid = DoubleAttr.valueOf(w_la.LocErrorIyy1ComponentOriginServid);
+w_la.LocImpErrorIyy1ComponentContextString = StringAttr.valueOf(w_la.LocErrorIyy1ComponentContextString, (short)512);
+w_la.LocImpErrorIyy1ComponentReturnCode = IntAttr.valueOf(w_la.LocErrorIyy1ComponentReturnCode);
+w_la.LocImpErrorIyy1ComponentReasonCode = IntAttr.valueOf(w_la.LocErrorIyy1ComponentReasonCode);
+w_la.LocImpErrorIyy1ComponentChecksum = FixedStringAttr.valueOf(w_la.LocErrorIyy1ComponentChecksum, (short)15);}}}
+globdata.getStateData().setLastStatementNumber( "0000000016" );
+f_0_trace(); if ( trace_ret_code != 8 ){w_la.LocImpErrorIyy1ComponentDialectCd = FixedStringAttr.valueOf(w_ia.ImpDialectIyy1ComponentDialectCd, (short)2);}
+globdata.getStateData().setLastStatementNumber( "0000000019" );
+cyyy9041_ia.ImpErrorIyy1ComponentReasonCode = IntAttr.valueOf(w_la.LocImpErrorIyy1ComponentReasonCode);
+cyyy9041_ia.ImpErrorIyy1ComponentImplementationId = DoubleAttr.valueOf(w_la.LocImpErrorIyy1ComponentImplementationId);
+cyyy9041_ia.ImpErrorIyy1ComponentSpecificationId = DoubleAttr.valueOf(w_la.LocImpErrorIyy1ComponentSpecificationId);
+cyyy9041_ia.ImpErrorIyy1ComponentDialectCd = FixedStringAttr.valueOf(w_la.LocImpErrorIyy1ComponentDialectCd, (short)2);
+cyyy9041_ia.ImpErrorIyy1ComponentActivityCd = FixedStringAttr.valueOf(w_la.LocImpErrorIyy1ComponentActivityCd, (short)15);
+globdata.getErrorData().setErrorEncounteredSW( ErrorData.NO_ERROR_FOUND_SW );
+iefRuntimeParm2.useActionBlock("gen.ort.yyy.CYYY9041", "CYYY9041", cyyy9041_ia, cyyy9041_oa);
+if ( ((!(globdata.getErrorData().getStatus().equals( ErrorData.NONE_SF ))) || (globdata.getErrorData().getErrorEncounteredSW() != ErrorData.NO_ERROR_FOUND_SW)) || (globdata.getErrorData().getViewOverflowSW() != ErrorData.NO_ERROR_FOUND_SW) )
+{throw new ABException();}
+globdata.getStateData().setCurrentABId( "0022020239" );
+globdata.getStateData().setCurrentABName( "CYY1A121_SERVER_TERMINATION" );
+globdata.getStateData().setLastStatementNumber( "0000000019" );
+w_la.LocErrorIyy1ComponentSeverityCode = FixedStringAttr.valueOf(cyyy9041_oa.ExpErrorIyy1ComponentSeverityCode, (short)1);
+w_la.LocErrorIyy1ComponentRollbackIndicator = FixedStringAttr.valueOf(cyyy9041_oa.ExpErrorIyy1ComponentRollbackIndicator, (short)1);
+w_la.LocErrorIyy1ComponentOriginServid = DoubleAttr.valueOf(cyyy9041_oa.ExpErrorIyy1ComponentOriginServid);
+w_la.LocErrorIyy1ComponentContextString = StringAttr.valueOf(cyyy9041_oa.ExpErrorIyy1ComponentContextString, (short)512);
+w_la.LocErrorIyy1ComponentReturnCode = IntAttr.valueOf(cyyy9041_oa.ExpErrorIyy1ComponentReturnCode);
+w_la.LocErrorIyy1ComponentReasonCode = IntAttr.valueOf(cyyy9041_oa.ExpErrorIyy1ComponentReasonCode);
+w_la.LocErrorIyy1ComponentChecksum = FixedStringAttr.valueOf(cyyy9041_oa.ExpErrorIyy1ComponentChecksum, (short)15);
+w_la.LocErrorMsgIyy1ComponentSeverityCode = FixedStringAttr.valueOf(cyyy9041_oa.ExpErrorMsgIyy1ComponentSeverityCode, (short)1);
+w_la.LocErrorMsgIyy1ComponentMessageTx = StringAttr.valueOf(cyyy9041_oa.ExpErrorMsgIyy1ComponentMessageTx, (short)512);
+cyyy9041_ia.freeInstance();
+cyyy9041_ia = null;
+cyyy9041_oa.freeInstance();
+cyyy9041_oa = null;}
+globdata.getStateData().setLastStatementNumber( "0000000020" );
+f_0_trace(); if ( trace_ret_code != 8 ){if ( ((double) w_la.LocErrorIyy1ComponentReturnCode < (double) w_la.LocDontChangeReturnCodesQ1Ok) )
+{globdata.getStateData().setLastStatementNumber( "0000000021" );
+w_la.LocImpErrorIyy1ComponentChecksum = FixedStringAttr.valueOf(w_la.LocErrorIyy1ComponentChecksum, (short)15);}}}
+globdata.getStateData().setLastStatementNumber( "0000000024" );
+f_0_trace(); if ( trace_ret_code != 8 ) {if ( CompareExit.compareTo(w_la.LocErrorMsgIyy1ComponentMessageTx, SPACES) <= 0 )
+{globdata.getStateData().setLastStatementNumber( "0000000025" );
+f_0_trace();if ( trace_ret_code != 8 ){w_la.LocErrorMsgIyy1ComponentMessageTx = StringAttr.valueOf(w_la.LocImpErrorIyy1ComponentContextString, (short)512);}}}
+f_0_trace(); if ( trace_ret_code != 8 ){if ( ((double) w_la.LocImpErrorIyy1ComponentReturnCode < (double) w_la.LocDontChangeReturnCodesQ1Ok) )
+{globdata.getStateData().setLastStatementNumber( "0000000031" );
+f_0_trace();if ( trace_ret_code != 8 ){w_la.LocImpErrorIyy1ComponentSeverityCode = FixedStringAttr.valueOf("E", (short)1);}
+globdata.getStateData().setLastStatementNumber( "0000000032" );
+f_0_trace();if ( trace_ret_code != 8 ){w_la.LocErrorMsgIyy1ComponentSeverityCode = FixedStringAttr.valueOf(w_la.LocImpErrorIyy1ComponentSeverityCode, (short)1);}}}
+globdata.getStateData().setLastStatementNumber( "0000000034" );
+f_0_trace();if ( trace_ret_code != 8 ){.ExpErrorMsgIyy1ComponentSeverityCode = FixedStringAttr.valueOf(w_la.LocErrorMsgIyy1ComponentSeverityCode, (short)1);
+w_oa.ExpErrorMsgIyy1ComponentMessageTx = StringAttr.valueOf(w_la.LocErrorMsgIyy1ComponentMessageTx, (short)512);}
+globdata.getStateData().setLastStatementNumber( "0000000035" );
+f_0_trace();if ( trace_ret_code != 8 ){w_oa.ExpErrorIyy1ComponentSeverityCode = FixedStringAttr.valueOf(w_la.LocImpErrorIyy1ComponentSeverityCode, (short)1);
+w_oa.ExpErrorIyy1ComponentRollbackIndicator = FixedStringAttr.valueOf(w_la.LocImpErrorIyy1ComponentRollbackIndicator, (short)1);
+w_oa.ExpErrorIyy1ComponentOriginServid = DoubleAttr.valueOf(w_la.LocImpErrorIyy1ComponentOriginServid);
+w_oa.ExpErrorIyy1ComponentContextString = StringAttr.valueOf(w_la.LocImpErrorIyy1ComponentContextString, (short)512);
+w_oa.ExpErrorIyy1ComponentReturnCode = IntAttr.valueOf(w_la.LocImpErrorIyy1ComponentReturnCode);
+w_oa.ExpErrorIyy1ComponentReasonCode = IntAttr.valueOf(w_la.LocImpErrorIyy1ComponentReasonCode);
+w_oa.ExpErrorIyy1ComponentChecksum = FixedStringAttr.valueOf(w_la.LocImpErrorIyy1ComponentChecksum, (short)15);}
+globdata.getStateData().setLastStatementNumber( "0000000037" );
+f_0_trace(); if ( trace_ret_code != 8 ){if ( ((double) w_oa.ExpErrorIyy1ComponentReturnCode < (double) w_la.LocDontChangeReturnCodesQ1Ok) )
+{globdata.getStateData().setLastStatementNumber( "0000000039" );
+f_0_trace();if ( trace_ret_code != 8 ){globdata.getStateData().setExitState( ex_StdReturnRb001 );
+globdata.getStateData().setExitInfoMsg( " " );
+globdata.getErrorData().setRollbackRequested( 'R' );
+globdata.getStateData().setExitMsgType( 'N' );}}
+else 
+{globdata.getStateData().setLastSubStatementNumber( "1" );
+f_0_trace();{globdata.getStateData().setLastStatementNumber( "0000000042" );
+f_0_trace();if ( trace_ret_code != 8 ){globdata.getStateData().setExitState( ex_StdReturn002 );
+globdata.getStateData().setExitInfoMsg( " " );
+globdata.getErrorData().setRollbackRequested( ' ' );
+globdata.getStateData().setExitMsgType( 'N' );}} ,}}
+}
+w_la.LocImpErrorIyy1ComponentOriginServid = DoubleAttr.valueOf(w_la.LocErrorIyy1ComponentOriginServid);
+w_la.LocImpErrorIyy1ComponentReasonCode = IntAttr.valueOf(w_la.LocErrorIyy1ComponentReasonCode);
+w_la.LocErrorIyy1ComponentReasonCode = IntAttr.valueOf(cyyy9051_oa.ExpErrorIyy1ComponentReasonCode);
+w_la.LocErrorIyy1ComponentChecksum = FixedStringAttr.valueOf(cyyy9051_oa.ExpErrorIyy1ComponentChecksum, (short)15);
+w_la.LocImpErrorIyy1ComponentOriginServid = DoubleAttr.valueOf(cyyy9051_oa.ExpIdentifiersIyy1ComponentOriginServid);
+
+
+
+
+

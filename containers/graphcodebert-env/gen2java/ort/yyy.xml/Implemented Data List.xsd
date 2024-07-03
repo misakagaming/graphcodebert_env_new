@@ -1,0 +1,61 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="title" type="xsd:string" />
+	<xsd:element name="modelname" type="xsd:string" />
+	<xsd:element name="subset" type="xsd:string" />
+	<xsd:element name="datetime" type="xsd:string" />
+	<xsd:element name="LONGNAME" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="DESC" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="THLENT" type="typeHighLevelEntity" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="THLENTDS" type="typeHighLevelEntity" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TATTRUSR" type="typeUserDefineAttribute" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TRELMM" type="typeRelationshipMembership" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="IMPLNTBY" type="associationImplementedBy" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TPART" type="typePartitioning" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TENTSU" type="typeEntitySubType" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:attribute name="NAME" type="xsd:string" />
+	<xsd:attribute name="IMPLMNTB" type="xsd:string" />
+	<xsd:attribute name="DENTY" type="xsd:string" />
+	<xsd:attribute name="RELPRTIM" type="xsd:string" />
+	<xsd:attribute name="DFIELD" type="xsd:string" />
+	<xsd:attribute name="ROLEFLD" type="xsd:string" />
+	<xsd:attribute name="TRECDATA" type="xsd:string" />
+	<xsd:complexType name="typeHighLevelEntity">
+		<xsd:attribute ref="NAME" />
+		<xsd:attribute ref="IMPLMNTB" />
+		<xsd:all>
+			<xsd:element ref="TRELMM" />
+			<xsd:element ref="TATTRUSR" />
+			<xsd:element ref="TPART" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="typeRelationshipMembership">
+		<xsd:attribute ref="NAME" />
+		<xsd:attribute ref="DENTY" />
+		<xsd:attribute ref="RELPRTIM" />
+		<xsd:all>
+			<xsd:element ref="IMPLNTBY" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="typeUserDefineAttribute">
+		<xsd:attribute ref="NAME" />
+		<xsd:all>
+			<xsd:element ref="IMPLNTBY" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="associationImplementedBy">
+		<xsd:attribute ref="ROLEFLD" />
+		<xsd:attribute ref="TRECDATA" />
+	</xsd:complexType>
+	<xsd:complexType name="typePartitioning">
+		<xsd:all>
+			<xsd:element ref="TATTRUSR" />
+			<xsd:element ref="TENTSU" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="typeEntitySubType">
+		<xsd:all>
+			<xsd:element ref="TATTRUSR" />
+			<xsd:element ref="TPART" />
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

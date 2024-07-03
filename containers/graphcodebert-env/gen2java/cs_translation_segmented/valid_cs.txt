@@ -1,0 +1,7 @@
+WLa.LocImpErrorIyy1ComponentContextString = StringAttr.ValueOf(WLa.LocErrorIyy1ComponentContextString, 512);
+WLa.LocImpErrorIyy1ComponentReturnCode = IntAttr.ValueOf(WLa.LocErrorIyy1ComponentReturnCode);
+WLa.LocImpErrorIyy1ComponentSpecificationId = DoubleAttr.ValueOf(Cyyy9051Oa.ExpIdentifiersIyy1ComponentSpecificationId);
+Cyyy9051Oa.FreeInstance(  );
+Cyyy9051Oa = null;
+WLa.LocImpErrorIyy1ComponentSeverityCode = FixedStringAttr.ValueOf(WIa.ImpErrorIyy1ComponentSeverityCode, 1);
+WLa.LocImpErrorIyy1ComponentRollbackIndicator = FixedStringAttr.ValueOf(WIa.ImpErrorIyy1ComponentRollbackIndicator, 1);

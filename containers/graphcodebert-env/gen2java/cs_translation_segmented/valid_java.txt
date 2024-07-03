@@ -1,0 +1,7 @@
+w_la.LocImpErrorIyy1ComponentContextString = StringAttr.valueOf(w_la.LocErrorIyy1ComponentContextString, (short)512);
+w_la.LocImpErrorIyy1ComponentReturnCode = IntAttr.valueOf(w_la.LocErrorIyy1ComponentReturnCode);
+w_la.LocImpErrorIyy1ComponentSpecificationId = DoubleAttr.valueOf(cyyy9051_oa.ExpIdentifiersIyy1ComponentSpecificationId);
+cyyy9051_oa.freeInstance();
+cyyy9051_oa = null;}
+f_0_trace(); if ( trace_ret_code != 8 ){w_la.LocImpErrorIyy1ComponentSeverityCode = FixedStringAttr.valueOf(w_ia.ImpErrorIyy1ComponentSeverityCode, (short)1);
+w_la.LocImpErrorIyy1ComponentRollbackIndicator = FixedStringAttr.valueOf(w_ia.ImpErrorIyy1ComponentRollbackIndicator, (short)1);

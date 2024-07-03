@@ -1,0 +1,78 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="title" type="xsd:string" />
+	<xsd:element name="modelname" type="xsd:string" />
+	<xsd:element name="subset" type="xsd:string" />
+	<xsd:element name="datetime" type="xsd:string" />
+	<xsd:element name="LONGNAME" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="DESC" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TALIAS" type="typeAlias" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TSUBJ" type="typeSubjectArea" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="THLENT" type="EntityTypeGroup" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="THLENTDS" type="EntityTypeGroup" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TENTSU" type="EntitySubType" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TPERMVAL" type="typePermittedValue" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="MAYBE" type="propertyMayHaveTheValue" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="TATTRUSR" type="typeUserDefineAttribute" minOccurs="0" maxOccurs="unbounded" />
+	<xsd:attribute name="NAME" type="xsd:string" />
+	<xsd:attribute name="DOMAN" type="xsd:string" />
+	<xsd:attribute name="LEN" type="xsd:string" />
+	<xsd:attribute name="UNITS" type="xsd:string" />
+	<xsd:attribute name="DECPLC" type="xsd:string" />
+	<xsd:attribute name="OPT" type="xsd:string" />
+	<xsd:attribute name="BASDER" type="xsd:string" />
+	<xsd:attribute name="VARLEN" type="xsd:string" />
+	<xsd:attribute name="CASESENS" type="xsd:string" />
+	<xsd:attribute name="SRCETYP" type="xsd:string" />
+	<xsd:attribute name="DATTYP" type="xsd:string" />
+	<xsd:attribute name="ENCPSLVL" type="xsd:string" />
+	<xsd:attribute name="DSDNAME" type="xsd:string" />
+	<xsd:attribute name="HIVAL" type="xsd:string" />
+	<xsd:attribute name="LOWVAL" type="xsd:string" />
+	<xsd:attribute name="PERMVAL" type="xsd:string" />
+	<xsd:attribute name="ABBREV" type="xsd:string" />
+	<xsd:attribute name="ACRONYM" type="xsd:string" />
+	<xsd:complexType name="typeAlias">
+		<xsd:attribute ref="NAME" />
+		<xsd:attribute ref="ABBREV" />
+		<xsd:attribute ref="ACRONYM" />
+		<xsd:all>
+			<xsd:element ref="LONGNAME" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="typeSubjectArea">
+		<xsd:attribute ref="NAME" />
+	</xsd:complexType>
+	<xsd:complexType name="EntityTypeGroup">
+		<xsd:attribute ref="NAME" />
+		<xsd:all>
+			<xsd:element ref="DESC" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="EntitySubType">
+		<xsd:attribute ref="NAME" />
+		<xsd:all>
+			<xsd:element ref="LONGNAME" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="typeUserDefinedAttribute">
+		<xsd:attribute ref="NAME" />
+		<xsd:all>
+			<xsd:element ref="TALIAS" />
+			<xsd:element ref="TSUBJ" />
+			<xsd:element ref="THLENT" />
+			<xsd:element ref="THLENTDS" />
+			<xsd:element ref="TENTSU" />
+			<xsd:element ref="TPERMVAL" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="typePermittedValue">
+		<xsd:attribute ref="LOWVAL" />
+		<xsd:attribute ref="HIVAL" />
+		<xsd:all>
+			<xsd:element ref="MAYBE" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="propertyMayHaveTheValue">
+		<xsd:attribute ref="PERMVAL" />
+	</xsd:complexType>
+</xsd:schema>

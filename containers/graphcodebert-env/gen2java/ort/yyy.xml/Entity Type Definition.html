@@ -1,0 +1,14 @@
+<HTML>
+  <XML id="source" src="Entity Type Definition.xml"></XML>
+  <XML id="style" src="Entity Type Definition.xsl"></XML>
+  
+  <HEAD>
+    <TITLE>CA Gen Report</TITLE>
+ </HEAD>
+
+  <SCRIPT FOR="window" EVENT="onload">
+    xslTarget.innerHTML = source.transformNode(style.XMLDocument);
+  </SCRIPT>
+  <BODY id="xslTarget">
+  </BODY>
+</HTML>

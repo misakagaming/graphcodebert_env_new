@@ -1,0 +1,7 @@
+SET loc_imp_error iyy1_component dialect_cd TO imp_dialect iyy1_component dialect_cd
++->IF loc_error iyy1_component return_code < loc dont_change_return_codes 1_ok!  MOVE loc_error iyy1_component TO loc_imp_error iyy1_component+--
+MOVE loc_error_msg iyy1_component TO exp_error_msg iyy1_component
+SET loc_g_context dont_change_text text_150 TO "CYY1S031"
+USE isc1z021_o_authorization_check_s WHICH IMPORTS: Entity View imp isc1_authorization_info TO Entity View imp isc1_authorization_info WHICH EXPORTS: Work View loc_error isc1_component FROM Work View exp_error isc1_component Entity View exp isc1_authorization_info FROM Entity View exp isc1_authorization_info
+USE cyy1a131_server_init WHICH EXPORTS: Work View loc_reference iyy1_server_data FROM Work View exp_reference iyy1_server_data
+SET exp_reference iyy1_server_data server_timestamp TO CURRENT_TIMESTAMP

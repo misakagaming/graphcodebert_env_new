@@ -1,0 +1,931 @@
+{
+  "projectName": "yyy.java",
+  "packages": [
+    {
+      "packageName": "unnamed",
+      "results": [
+        {
+          "sourceFilePath": "C:\\Users\\eraye\\OneDrive\\Masaüstü\\cmpe\\code conversion\\gen2java\\ort\\yyy.java\\CYY1A121.java",
+          "className": "CYY1A121",
+          "type": "class",
+          "annotSchemasMap": {
+            "Override-1063": "java.lang",
+            "Override-1728": "java.lang",
+            "Override-1497": "java.lang"
+          },
+          "classMetric": {
+            "LOC": 1727,
+            "ASC": 1,
+            "AC": 3,
+            "NAEC": 3,
+            "UAC": 1,
+            "NEC": 124
+          },
+          "elementsReport": [
+            {
+              "type": "method",
+              "sourceCodeLine": 1769,
+              "elementName": "getVDF",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 973,
+              "elementName": "ImpErrorIyy1ComponentOriginServid_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 76,
+              "elementName": "trace_ret_code",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1610,
+              "elementName": "ExpErrorMsgIyy1ComponentMessageTx",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1313,
+              "elementName": "LocErrorMsgIyy1ComponentSeverityCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1330,
+              "elementName": "LocErrorIyy1ComponentSeverityCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1337,
+              "elementName": "LocErrorIyy1ComponentSeverityCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1623,
+              "elementName": "ExpErrorIyy1ComponentSeverityCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1728,
+              "elementName": "clone",
+              "aedValue": 1,
+              "annotationMetrics": [
+                {
+                  "annotationName": "Override",
+                  "sourceCodeLine": 1728,
+                  "schema": "java.lang",
+                  "annotationMetrics": {
+                    "AA": 0,
+                    "LOCAD": 1,
+                    "ANL": 0
+                  }
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 47,
+              "elementName": "w_ia",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1110,
+              "elementName": "copyFrom",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1317,
+              "elementName": "LocErrorMsgIyy1ComponentMessageTx_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1063,
+              "elementName": "clone",
+              "aedValue": 1,
+              "annotationMetrics": [
+                {
+                  "annotationName": "Override",
+                  "sourceCodeLine": 1063,
+                  "schema": "java.lang",
+                  "annotationMetrics": {
+                    "AA": 0,
+                    "LOCAD": 1,
+                    "ANL": 0
+                  }
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 74,
+              "elementName": "func_0022020239_esc_flag",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1282,
+              "elementName": "LocImpErrorIyy1ComponentActivityCd_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1599,
+              "elementName": "ExpErrorMsgIyy1ComponentSeverityCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1634,
+              "elementName": "ExpErrorIyy1ComponentRollbackIndicator",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1375,
+              "elementName": "LocErrorIyy1ComponentReturnCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1420,
+              "elementName": "LocDontChangeReturnCodesQ1Ok",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1008,
+              "elementName": "ImpErrorIyy1ComponentReasonCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 749,
+              "elementName": "f_22020239_init",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1219,
+              "elementName": "LocImpErrorIyy1ComponentContextString",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1289,
+              "elementName": "LocImpErrorIyy1ComponentActivityCd",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1399,
+              "elementName": "LocErrorIyy1ComponentChecksum_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 55,
+              "elementName": "w_la",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1341,
+              "elementName": "LocErrorIyy1ComponentRollbackIndicator_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 68,
+              "elementName": "ex_StdReturn002",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 951,
+              "elementName": "ImpErrorIyy1ComponentSeverityCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 61,
+              "elementName": "cyyy9041_ia",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1777,
+              "elementName": "copyFrom",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1650,
+              "elementName": "ExpErrorIyy1ComponentContextString_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 77,
+              "elementName": "padtext",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 969,
+              "elementName": "ImpErrorIyy1ComponentRollbackIndicator",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1185,
+              "elementName": "LocImpErrorIyy1ComponentSeverityCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "constructor",
+              "sourceCodeLine": 358,
+              "elementName": "CYY1A121",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1255,
+              "elementName": "LocImpErrorIyy1ComponentImplementationId",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1681,
+              "elementName": "ExpErrorIyy1ComponentReasonCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1348,
+              "elementName": "LocErrorIyy1ComponentRollbackIndicator",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1603,
+              "elementName": "ExpErrorMsgIyy1ComponentMessageTx_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1235,
+              "elementName": "LocImpErrorIyy1ComponentReasonCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1223,
+              "elementName": "LocImpErrorIyy1ComponentReturnCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 223,
+              "elementName": "PADTEXT_SIZE",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 62,
+              "elementName": "cyyy9041_oa",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "constructor",
+              "sourceCodeLine": 1433,
+              "elementName": "CYY1A121_LA",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 75,
+              "elementName": "padview",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1027,
+              "elementName": "ImpErrorIyy1ComponentChecksum",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1737,
+              "elementName": "reset",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1482,
+              "elementName": "getInstance",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1616,
+              "elementName": "ExpErrorIyy1ComponentSeverityCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 945,
+              "elementName": "ImpDialectIyy1ComponentDialectCd",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1661,
+              "elementName": "ExpErrorIyy1ComponentReturnCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 996,
+              "elementName": "ImpErrorIyy1ComponentReturnCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1406,
+              "elementName": "LocErrorIyy1ComponentChecksum",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "constructor",
+              "sourceCodeLine": 1040,
+              "elementName": "CYY1A121_IA",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1271,
+              "elementName": "LocImpErrorIyy1ComponentDialectCd_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1259,
+              "elementName": "LocImpErrorIyy1ComponentSpecificationId_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1506,
+              "elementName": "reset",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1387,
+              "elementName": "LocErrorIyy1ComponentReasonCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1721,
+              "elementName": "freeInstance",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 962,
+              "elementName": "ImpErrorIyy1ComponentRollbackIndicator_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "constructor",
+              "sourceCodeLine": 1032,
+              "elementName": "CYY1A121_IA",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1016,
+              "elementName": "ImpErrorIyy1ComponentReasonCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "class",
+              "sourceCodeLine": 42,
+              "elementName": "CYY1A121",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1669,
+              "elementName": "ExpErrorIyy1ComponentReturnCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1048,
+              "elementName": "getInstance",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1306,
+              "elementName": "LocErrorMsgIyy1ComponentSeverityCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1638,
+              "elementName": "ExpErrorIyy1ComponentOriginServid_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1371,
+              "elementName": "LocErrorIyy1ComponentContextString",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1189,
+              "elementName": "LocImpErrorIyy1ComponentRollbackIndicator_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 992,
+              "elementName": "ImpErrorIyy1ComponentContextString",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1497,
+              "elementName": "clone",
+              "aedValue": 1,
+              "annotationMetrics": [
+                {
+                  "annotationName": "Override",
+                  "sourceCodeLine": 1497,
+                  "schema": "java.lang",
+                  "annotationMetrics": {
+                    "AA": 0,
+                    "LOCAD": 1,
+                    "ANL": 0
+                  }
+                }
+              ]
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 777,
+              "elementName": "padview_init",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 51,
+              "elementName": "w_oa",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 736,
+              "elementName": "f_22020239_localAlloc",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 67,
+              "elementName": "ex_StdReturnRb001",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1395,
+              "elementName": "LocErrorIyy1ComponentReasonCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "constructor",
+              "sourceCodeLine": 1425,
+              "elementName": "CYY1A121_LA",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1673,
+              "elementName": "ExpErrorIyy1ComponentReasonCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1685,
+              "elementName": "ExpErrorIyy1ComponentChecksum_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1592,
+              "elementName": "ExpErrorMsgIyy1ComponentSeverityCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1657,
+              "elementName": "ExpErrorIyy1ComponentContextString",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1300,
+              "elementName": "LocImpErrorIyy1ComponentChecksum",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1247,
+              "elementName": "LocImpErrorIyy1ComponentImplementationId_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "class",
+              "sourceCodeLine": 1585,
+              "elementName": "CYY1A121_OA",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "constructor",
+              "sourceCodeLine": 1705,
+              "elementName": "CYY1A121_OA",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 377,
+              "elementName": "CYY1A121",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1761,
+              "elementName": "setFromVDF",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1278,
+              "elementName": "LocImpErrorIyy1ComponentDialectCd",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "class",
+              "sourceCodeLine": 931,
+              "elementName": "CYY1A121_IA",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1196,
+              "elementName": "LocImpErrorIyy1ComponentRollbackIndicator",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1231,
+              "elementName": "LocImpErrorIyy1ComponentReturnCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1004,
+              "elementName": "ImpErrorIyy1ComponentReturnCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 767,
+              "elementName": "f_0_trace",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 414,
+              "elementName": "f_22020239",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1412,
+              "elementName": "LocDontChangeReturnCodesQ1Ok_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1352,
+              "elementName": "LocErrorIyy1ComponentOriginServid_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1178,
+              "elementName": "LocImpErrorIyy1ComponentSeverityCode_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1293,
+              "elementName": "LocImpErrorIyy1ComponentChecksum_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 958,
+              "elementName": "ImpErrorIyy1ComponentSeverityCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1627,
+              "elementName": "ExpErrorIyy1ComponentRollbackIndicator_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "class",
+              "sourceCodeLine": 1171,
+              "elementName": "CYY1A121_LA",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1383,
+              "elementName": "LocErrorIyy1ComponentReturnCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "constructor",
+              "sourceCodeLine": 1697,
+              "elementName": "CYY1A121_OA",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1785,
+              "elementName": "copyFrom",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 60,
+              "elementName": "cyyy9051_oa",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1646,
+              "elementName": "ExpErrorIyy1ComponentOriginServid",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1360,
+              "elementName": "LocErrorIyy1ComponentOriginServid",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1692,
+              "elementName": "ExpErrorIyy1ComponentChecksum",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1208,
+              "elementName": "LocImpErrorIyy1ComponentOriginServid",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1267,
+              "elementName": "LocImpErrorIyy1ComponentSpecificationId",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1713,
+              "elementName": "getInstance",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1020,
+              "elementName": "ImpErrorIyy1ComponentChecksum_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 78,
+              "elementName": "initPadText",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1212,
+              "elementName": "LocImpErrorIyy1ComponentContextString_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 981,
+              "elementName": "ImpErrorIyy1ComponentOriginServid",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1118,
+              "elementName": "copyFrom",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 1072,
+              "elementName": "reset",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1200,
+              "elementName": "LocImpErrorIyy1ComponentOriginServid_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 985,
+              "elementName": "ImpErrorIyy1ComponentContextString_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1243,
+              "elementName": "LocImpErrorIyy1ComponentReasonCode",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1324,
+              "elementName": "LocErrorMsgIyy1ComponentMessageTx",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 938,
+              "elementName": "ImpDialectIyy1ComponentDialectCd_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "method",
+              "sourceCodeLine": 391,
+              "elementName": "_CYY1A121",
+              "aedValue": 0,
+              "annotationMetrics": []
+            },
+            {
+              "type": "field",
+              "sourceCodeLine": 1364,
+              "elementName": "LocErrorIyy1ComponentContextString_AS",
+              "aedValue": 0,
+              "annotationMetrics": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

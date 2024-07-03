@@ -1,0 +1,19 @@
+f_0_trace(); if ( trace_ret_code != 8 ){w_la.LocImpErrorIyy1ComponentSeverityCode = FixedStringAttr.valueOf(w_la.LocErrorIyy1ComponentSeverityCode, (short)1);
+w_la.LocImpErrorIyy1ComponentRollbackIndicator = FixedStringAttr.valueOf(w_la.LocErrorIyy1ComponentRollbackIndicator, (short)1);
+w_la.LocImpErrorIyy1ComponentImplementationId = DoubleAttr.valueOf(cyyy9051_oa.ExpIdentifiersIyy1ComponentImplementationId);
+globdata.getStateData().setLastStatementNumber( "0000000012" );
+globdata.getStateData().setLastStatementNumber( "0000000026" );
+f_0_trace(); if ( trace_ret_code != 8 ){if ( CompareExit.compareTo(w_la.LocErrorMsgIyy1ComponentSeverityCode, SPACES) <= 0 )
+{globdata.getStateData().setLastStatementNumber( "0000000027" );
+f_0_trace();if ( trace_ret_code != 8 ){w_la.LocErrorMsgIyy1ComponentSeverityCode = FixedStringAttr.valueOf(w_la.LocImpErrorIyy1ComponentSeverityCode, (short)1);}}}
+globdata.getStateData().setLastStatementNumber( "0000000030" );
+globdata.getStateData().setLastStatementNumber( "0000000005" );
+f_0_trace(); if ( trace_ret_code != 8 ) {w_la.LocDontChangeReturnCodesQ1Ok = IntAttr.valueOf((int)TIRD2DEC.TIRD2DC1(1, 0, TIRD2DEC.ROUND_NONE, 5));}
+globdata.getStateData().setLastStatementNumber( "0000000008" );
+f_0_trace(); if ( trace_ret_code != 8 ){cyyy9041_ia = (gen.ort.yyy.CYYY9041_IA)(iefRuntimeParm2.getInstance("gen.ort.yyy.CYYY9041_IA"));
+cyyy9041_oa = (gen.ort.yyy.CYYY9041_OA)(iefRuntimeParm2.getInstance("gen.ort.yyy.CYYY9041_OA"));
+cyyy9041_ia.ImpErrorIyy1ComponentOriginServid = DoubleAttr.valueOf(w_la.LocImpErrorIyy1ComponentOriginServid);
+cyyy9041_ia.ImpErrorIyy1ComponentContextString = StringAttr.valueOf(w_la.LocImpErrorIyy1ComponentContextString, (short)512);
+cyyy9041_ia.ImpErrorIyy1ComponentReturnCode = IntAttr.valueOf(w_la.LocImpErrorIyy1ComponentReturnCode);
+
+
