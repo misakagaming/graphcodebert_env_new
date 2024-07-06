@@ -2,8 +2,9 @@
 # Licensed under the MIT license.
 
 from tree_sitter import Language, Parser
+from Language import build_library
 
-Language.build_library(
+build_library(
   # Store the library in the `build` directory
   'my-languages.so',
 
