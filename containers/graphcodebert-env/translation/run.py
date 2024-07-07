@@ -1070,16 +1070,23 @@ def main_m():
             model.eval() 
             pred_ids=[]
             p=[]
-            for batch in tqdm(eval_dataloader, total=len(eval_dataloader), desc="Eval bleu for {} set".format('dev')):
-                                
-                with torch.no_grad():
-                    if args.model_type == 'roberta':
-                        batch = tuple(t.to(device) for t in batch)
-                        source_ids,source_mask,position_idx,att_mask,target_ids,target_mask = batch 
-                        preds = model(source_ids=source_ids, source_mask=source_mask)
-
-                        top_preds = [pred[0].cpu().numpy() for pred in preds]
-                    else:
+            if args.model_type == 'roberta':
+                for batch in tqdm(eval_dataloader,total=len(eval_dataloader)):
+                    batch = tuple(t.to(device) for t in batch)
+                    source_ids,source_mask,position_idx,att_mask,target_ids,target_mask = batch                    
+                    with torch.no_grad():
+                        preds = model(source_ids,source_mask,position_idx,att_mask)  
+                        for pred in preds:
+                            t=pred[0].cpu().numpy()
+                            t=list(t)
+                            if 0 in t:
+                                t=t[:t.index(0)]
+                            text = tokenizer.decode(t,clean_up_tokenization_spaces=False)
+                            p.append(text)
+            else:
+                for batch in tqdm(eval_dataloader, total=len(eval_dataloader), desc="Eval bleu for {} set".format('dev')):
+                                    
+                    with torch.no_grad():
                         source_ids = batch[0].to(args.device)
                         source_mask = source_ids.ne(tokenizer.pad_token_id)
                         preds = model.generate(source_ids,
@@ -1088,13 +1095,13 @@ def main_m():
                                                num_beams=args.beam_size,
                                                max_length=args.max_target_length)
                         top_preds = list(preds.cpu().numpy())
-                    pred_ids.extend(top_preds)
-                    for id in pred_ids:
-                        id = list(id)
-                        for i in id:
-                            if i > 1099:
-                                id[id.index(i)] = 1099
-                        p.append(tokenizer.decode(id, skip_special_tokens=True, clean_up_tokenization_spaces=False))
+                        pred_ids.extend(top_preds)
+                        for id in pred_ids:
+                            id = list(id)
+                            for i in id:
+                                if i > 1099:
+                                    id[id.index(i)] = 1099
+                            p.append(tokenizer.decode(id, skip_special_tokens=True, clean_up_tokenization_spaces=False))
             model.train()
             predictions=[]
             accs=[]
