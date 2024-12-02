@@ -59,7 +59,6 @@ class Example(object):
         self.target = target
 
 """def read_examples(filename):
-    """Read examples from filename."""
     examples=[]
     with open(filename,encoding="utf-8") as f:
         for idx, line in enumerate(f):
