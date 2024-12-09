@@ -489,6 +489,8 @@ def main():
                     torch.save(model_to_save.state_dict(), output_model_file)
                
     if args.do_test:
+        type(model.encoder.embeddings)
+        print(model.encoder.embeddings)
         files=[]
         if args.dev_filename is not None:
             files.append(args.dev_filename)
