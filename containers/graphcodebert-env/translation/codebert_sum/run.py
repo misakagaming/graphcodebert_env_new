@@ -489,8 +489,8 @@ def main():
                     torch.save(model_to_save.state_dict(), output_model_file)
                
     if args.do_test:
-        type(model.encoder.embeddings)
         print(model.encoder.embeddings)
+        
         files=[]
         if args.dev_filename is not None:
             files.append(args.dev_filename)
@@ -502,13 +502,15 @@ def main():
             eval_features = convert_examples_to_features(eval_examples, tokenizer, args,stage='test')
             all_source_ids = torch.tensor([f.source_ids for f in eval_features], dtype=torch.long)
             all_source_mask = torch.tensor([f.source_mask for f in eval_features], dtype=torch.long)    
-            eval_data = TensorDataset(all_source_ids,all_source_mask)   
+            eval_data = TensorDataset(all_source_ids,all_source_mask)
 
             # Calculate bleu
             eval_sampler = SequentialSampler(eval_data)
             eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=args.eval_batch_size)
 
             model.eval() 
+            l = [module for module in model.modules() if not isinstance(module, Seq2Seq)]
+            print(l)
             p=[]
             for batch in tqdm(eval_dataloader,total=len(eval_dataloader)):
                 batch = tuple(t.to(device) for t in batch)

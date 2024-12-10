@@ -14,3 +14,4 @@ numpy
 pandas
 scipy>=0.15.1
 scikit-learn>=0.18
+gdown
