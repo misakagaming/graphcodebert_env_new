@@ -510,7 +510,8 @@ def main():
 
             model.eval() 
             l = [module for module in model.modules() if not isinstance(module, Seq2Seq)]
-            print(l)
+            print(l[1])
+            print(l[1].word_embeddings)
             p=[]
             for batch in tqdm(eval_dataloader,total=len(eval_dataloader)):
                 batch = tuple(t.to(device) for t in batch)
