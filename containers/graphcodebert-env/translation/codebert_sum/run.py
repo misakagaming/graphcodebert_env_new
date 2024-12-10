@@ -509,9 +509,10 @@ def main():
             eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=args.eval_batch_size)
 
             model.eval() 
-            l = [module for module in model.modules() if not isinstance(module, Seq2Seq)]
-            print(l[1])
-            print(l[1].word_embeddings)
+            embeds=model.encoder.embeddings.word_embeddingsi
+            print(embeds)
+            for i in embeds:
+                print(i)
             p=[]
             for batch in tqdm(eval_dataloader,total=len(eval_dataloader)):
                 batch = tuple(t.to(device) for t in batch)
