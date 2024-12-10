@@ -509,7 +509,7 @@ def main():
             eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=args.eval_batch_size)
 
             model.eval() 
-            embeds=model.encoder.embeddings.word_embeddingsi
+            embeds=model.encoder.embeddings.word_embeddings
             print(embeds)
             for i in embeds:
                 print(i)
