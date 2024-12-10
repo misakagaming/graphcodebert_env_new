@@ -515,7 +515,7 @@ def main():
                 print(i)
             print(embeds.weight)
             print(embeds.parameters)
-            np.savetxt('/users/eray.erer/codebert_sum/weights.txt', embeds.weight.numpy())
+            np.savetxt('/users/eray.erer/codebert_sum/weights.txt', embeds.weight.cpu().numpy())
             p=[]
             for batch in tqdm(eval_dataloader,total=len(eval_dataloader)):
                 batch = tuple(t.to(device) for t in batch)
