@@ -511,7 +511,7 @@ def main():
             model.eval() 
             embeds=model.encoder.embeddings.word_embeddings
             print(embeds)
-            for i in embeds:
+            for i in dir(embeds):
                 print(i)
             p=[]
             for batch in tqdm(eval_dataloader,total=len(eval_dataloader)):
