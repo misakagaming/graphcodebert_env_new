@@ -513,6 +513,10 @@ def main():
             print(embeds)
             for i in dir(embeds):
                 print(i)
+            print(embed.embedding_dim)
+            print(embed.num_embeddings)
+            print(embed.weight)
+            print(embed.parameters)
             p=[]
             for batch in tqdm(eval_dataloader,total=len(eval_dataloader)):
                 batch = tuple(t.to(device) for t in batch)
