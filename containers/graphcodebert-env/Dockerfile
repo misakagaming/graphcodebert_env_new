@@ -9,6 +9,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         cmake \
         ninja-build \
         build-essential \
+		checkinstall \
         python3 \
         python3-dev \
         python3-pip \

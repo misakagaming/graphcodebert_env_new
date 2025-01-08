@@ -87,7 +87,7 @@ def read_examples(filename):
         heading = next(f)
         reader_obj = csv.reader(f)
         for idx, row in enumerate(reader_obj):
-            code=row[0]
+            code=row[2]
             nl=row[1]           
             examples.append(
                 Example(
