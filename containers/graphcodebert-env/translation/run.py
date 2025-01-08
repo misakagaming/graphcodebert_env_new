@@ -213,7 +213,26 @@ class Example(object):
 
 def read_examples(srclang, filename):
     """Read examples from filename."""
+    is_csv = False
+    if name in ["train.csv", "test.csv", "valid.csv"]:
+        is_csv = True
     examples=[]
+    if is_csv:
+        with open(filename,encoding="utf-8") as f:
+            heading = next(f)
+            reader_obj = csv.reader(f)
+            for idx, row in enumerate(reader_obj):
+                src=row[2]
+                trg=row[3]           
+                examples.append(
+                    Example(
+                            source=src,
+                            target=trg
+                            lang=srclang
+                            ) 
+                )
+        return examples
+            
     source,target=filename.split(',')
         
     with open(source,encoding="utf-8") as f1,open(target,encoding="utf-8") as f2:
