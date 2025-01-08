@@ -227,7 +227,7 @@ def read_examples(srclang, filename):
                 examples.append(
                     Example(
                             source=src,
-                            target=trg
+                            target=trg,
                             lang=srclang
                             ) 
                 )
