@@ -215,7 +215,7 @@ def read_examples(srclang, filename):
     """Read examples from filename."""
     is_csv = False
     print(filename)
-    if filename in ["train.csv", "test.csv", "valid.csv"]:
+    if ".csv" in filename:
         is_csv = True
     examples=[]
     if is_csv:
