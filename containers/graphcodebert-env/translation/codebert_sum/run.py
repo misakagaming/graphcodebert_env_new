@@ -33,7 +33,11 @@ import argparse
 import numpy as np
 from io import open
 from itertools import cycle
+import torch
 import torch.nn as nn
+import torchtext.vocab as vocab
+from torchtext import data
+from torchtext.data import Field, BucketIterator
 from model import Seq2Seq
 from tqdm import tqdm, trange
 from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler,TensorDataset
@@ -212,6 +216,8 @@ def main():
                         help="Whether to run eval on the dev set.")
     parser.add_argument("--do_test", action='store_true',
                         help="Whether to run eval on the dev set.")
+    parser.add_argument("--do_lamner", action='store_true',
+                        help="Whether to use lamner embeds")
     parser.add_argument("--do_lower_case", action='store_true',
                         help="Set this flag if you are using an uncased model.")
     parser.add_argument("--no_cuda", action='store_true',
@@ -250,7 +256,7 @@ def main():
     # print arguments
     args = parser.parse_args()
     logger.info(args)
-
+    MAX_VOCAB_SIZE = 50_000
     # Setup CUDA, GPU & distributed training
     if args.local_rank == -1 or args.no_cuda:
         device = torch.device("cuda" if torch.cuda.is_available() and not args.no_cuda else "cpu")
@@ -283,7 +289,49 @@ def main():
     if args.load_model_path is not None:
         logger.info("reload model from {}".format(args.load_model_path))
         model.load_state_dict(torch.load(args.load_model_path))
+    
+    if args.do_lamner:
+        SRC = Field(init_token = '<sos>', 
+                eos_token = '<eos>', 
+                lower = True, 
+                include_lengths = True)
+        TRG = Field(init_token = '<sos>', 
+                eos_token = '<eos>', 
+                lower = True)
+        train_data, valid_data, test_data = data.TabularDataset.splits(
+            path='./data_seq2seq/', train='train_seq.csv',
+            skip_header=True,
+            validation='valid_seq.csv', test='test_seq.csv', format='CSV',
+            fields=[('code', SRC), ('summary', TRG)])
+        custom_embeddings_semantic_encoder = vocab.Vectors(name = 'custom_embeddings/semantic_embeds.txt',
+                                          cache = 'custom_embeddings_semantic_encoder',
+                                          unk_init = torch.Tensor.normal_) 
+        custom_embeddings_syntax_encoder = vocab.Vectors(name = 'custom_embeddings/syntax_embeds.txt',
+                                          cache = 'custom_embeddings_syntax_encoder',
+                                         unk_init = torch.Tensor.normal_)
         
+        SRC.build_vocab(train_data, 
+                         max_size = MAX_VOCAB_SIZE, 
+                         vectors = custom_embeddings_semantic_encoder
+                       ) 
+        TRG.build_vocab(train_data, 
+                         max_size = MAX_VOCAB_SIZE 
+                         #vectors = custom_embeddings_decoder
+                       )
+        SRC.build_vocab(train_data, 
+                   max_size = MAX_VOCAB_SIZE, 
+                   vectors = custom_embeddings_semantic_encoder
+                 )
+        embeddings_enc1 = SRC.vocab.vectors
+        SRC.build_vocab(train_data, 
+	  			 max_size = MAX_VOCAB_SIZE, 
+	  			 vectors = custom_embeddings_syntax_encoder
+	  		   )
+        embeddings_enc2 = SRC.vocab.vectors
+        embeddings_enc3 = torch.cat([embeddings_enc2, embeddings_enc1], dim=1)
+        model.encoder.embedding.weight.data.copy_(embeddings_enc3)
+    
+    
     model.to(device)
     if args.local_rank != -1:
         # Distributed training
