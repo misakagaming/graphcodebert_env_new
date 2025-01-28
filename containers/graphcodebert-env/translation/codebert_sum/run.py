@@ -291,35 +291,7 @@ def main():
         model.load_state_dict(torch.load(args.load_model_path))
     
     if args.do_lamner:
-        SRC = Field(init_token = '<sos>', 
-                eos_token = '<eos>', 
-                lower = True, 
-                include_lengths = True)
-        TRG = Field(init_token = '<sos>', 
-                eos_token = '<eos>', 
-                lower = True)
-        train_data, valid_data, test_data = data.TabularDataset.splits(
-            path='./data_seq2seq/', train='train_seq.csv',
-            skip_header=True,
-            validation='valid_seq.csv', test='test_seq.csv', format='CSV',
-            fields=[('code', SRC), ('summary', TRG)])
-        custom_embeddings_semantic_encoder = vocab.Vectors(name = 'custom_embeddings/concat_weigths.txt',
-                                          cache = 'custom_embeddings_semantic_encoder',
-                                          unk_init = torch.Tensor.normal_) 
-        
-        SRC.build_vocab(train_data, 
-                         max_size = MAX_VOCAB_SIZE, 
-                         vectors = custom_embeddings_semantic_encoder
-                       ) 
-        TRG.build_vocab(train_data, 
-                         max_size = MAX_VOCAB_SIZE 
-                         #vectors = custom_embeddings_decoder
-                       )
-        SRC.build_vocab(train_data, 
-                   max_size = MAX_VOCAB_SIZE, 
-                   vectors = custom_embeddings_semantic_encoder
-                 )
-        embeddings_enc1 = SRC.vocab.vectors
+        embeddings_enc1 = torch.from_numpy(np.loadtxt('custom_embeddings/concat_weigths.txt'))
         model.encoder.embeddings.word_embeddings.weight.data.copy_(embeddings_enc1)
     
     
