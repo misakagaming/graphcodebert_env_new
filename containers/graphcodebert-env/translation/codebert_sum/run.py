@@ -329,8 +329,7 @@ def main():
 	  		   )
         embeddings_enc2 = SRC.vocab.vectors
         embeddings_enc3 = torch.cat([embeddings_enc2, embeddings_enc1], dim=1)
-        print(dir(model.encoder.embeddings))
-        model.encoder.embeddings.weight.data.copy_(embeddings_enc3)
+        model.encoder.embeddings[0][0].weight.data.copy_(embeddings_enc3)
     
     
     model.to(device)
