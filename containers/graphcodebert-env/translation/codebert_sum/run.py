@@ -277,10 +277,6 @@ def main():
         
     config_class, model_class, tokenizer_class = MODEL_CLASSES[args.model_type]
     config = config_class.from_pretrained(args.config_name if args.config_name else args.model_name_or_path)
-    if args.do_lamner:
-        config.hidden_size = 512
-        config.num_hidden_layers = 8
-        config.num_attention_heads = 8
     tokenizer = tokenizer_class.from_pretrained(args.tokenizer_name if args.tokenizer_name else args.model_name_or_path,do_lower_case=args.do_lower_case)
     
     #build model
@@ -307,12 +303,9 @@ def main():
             skip_header=True,
             validation='valid_seq.csv', test='test_seq.csv', format='CSV',
             fields=[('code', SRC), ('summary', TRG)])
-        custom_embeddings_semantic_encoder = vocab.Vectors(name = 'custom_embeddings/semantic_embeds.txt',
+        custom_embeddings_semantic_encoder = vocab.Vectors(name = 'custom_embeddings/concat_weigths.txt',
                                           cache = 'custom_embeddings_semantic_encoder',
                                           unk_init = torch.Tensor.normal_) 
-        custom_embeddings_syntax_encoder = vocab.Vectors(name = 'custom_embeddings/syntax_embeds.txt',
-                                          cache = 'custom_embeddings_syntax_encoder',
-                                         unk_init = torch.Tensor.normal_)
         
         SRC.build_vocab(train_data, 
                          max_size = MAX_VOCAB_SIZE, 
@@ -327,13 +320,7 @@ def main():
                    vectors = custom_embeddings_semantic_encoder
                  )
         embeddings_enc1 = SRC.vocab.vectors
-        SRC.build_vocab(train_data, 
-	  			 max_size = MAX_VOCAB_SIZE, 
-	  			 vectors = custom_embeddings_syntax_encoder
-	  		   )
-        embeddings_enc2 = SRC.vocab.vectors
-        embeddings_enc3 = torch.cat([embeddings_enc2, embeddings_enc1], dim=1)
-        model.encoder.embeddings.word_embeddings.weight.data.copy_(embeddings_enc3)
+        model.encoder.embeddings.word_embeddings.weight.data.copy_(embeddings_enc1)
     
     
     model.to(device)
