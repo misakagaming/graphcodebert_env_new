@@ -289,31 +289,7 @@ def main():
     if args.load_model_path is not None:
         logger.info("reload model from {}".format(args.load_model_path))
         model.load_state_dict(torch.load(args.load_model_path))
-    
-    if args.do_lamner:
-        SRC = Field(init_token = '<sos>', 
-            eos_token = '<eos>', 
-            lower = True, 
-            include_lengths = True)
-        TRG = Field(init_token = '<sos>', 
-                eos_token = '<eos>', 
-                lower = True)
-        train_data, valid_data, test_data = data.TabularDataset.splits(
-              path='./data/', train='train.csv',
-              skip_header=True,
-              validation='valid.csv', test='test.csv', format='CSV',
-              fields=[('code', SRC), ('summary', TRG)])
-        lamner_embeds = vocab.Vectors(name = 'custom_embeddings/concat_weigths.txt',
-                      cache = 'lamner_embeds',
-                      unk_init = torch.Tensor.normal_)
-        SRC.build_vocab(train_data, 
-				 max_size = MAX_VOCAB_SIZE, 
-				 vectors = lamner_embeds
-			   )
-        embeddings_enc1 = SRC.vocab.vectors
-        d = embeddings_enc1.shape[1]
-        embeddings_enc1 = torch.cat([embeddings_enc1, torch.rand(1, d).normal_()], dim=1)
-        model.encoder.embeddings.word_embeddings.weight.data.copy_(embeddings_enc1)
+   
     
     
     model.to(device)
