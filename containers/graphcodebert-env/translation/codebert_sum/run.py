@@ -277,15 +277,10 @@ def main():
         
     config_class, model_class, tokenizer_class = MODEL_CLASSES[args.model_type]
     config = config_class.from_pretrained(args.config_name if args.config_name else args.model_name_or_path)
-    if args.do_lamner:
-        config.vocab_size = 18860
     tokenizer = tokenizer_class.from_pretrained(args.tokenizer_name if args.tokenizer_name else args.model_name_or_path,do_lower_case=args.do_lower_case)
     
     #build model
-    if args.do_lamner:
-        encoder = model_class(config=config)
-    else:
-        encoder = model_class.from_pretrained(args.model_name_or_path,config=config)    
+    encoder = model_class.from_pretrained(args.model_name_or_path,config=config)    
     decoder_layer = nn.TransformerDecoderLayer(d_model=config.hidden_size, nhead=config.num_attention_heads)
     decoder = nn.TransformerDecoder(decoder_layer, num_layers=6)
     model=Seq2Seq(encoder=encoder,decoder=decoder,config=config,
@@ -296,7 +291,26 @@ def main():
         model.load_state_dict(torch.load(args.load_model_path))
     
     if args.do_lamner:
-        embeddings_enc1 = torch.from_numpy(np.loadtxt('custom_embeddings/concat_weigths.txt'))
+        SRC = Field(init_token = '<sos>', 
+            eos_token = '<eos>', 
+            lower = True, 
+            include_lengths = True)
+        TRG = Field(init_token = '<sos>', 
+                eos_token = '<eos>', 
+                lower = True)
+        train_data, valid_data, test_data = data.TabularDataset.splits(
+              path='./data/', train='train.csv',
+              skip_header=True,
+              validation='valid.csv', test='test.csv', format='CSV',
+              fields=[('code', SRC), ('summary', TRG)])
+        lamner_embeds = vocab.Vectors(name = 'custom_embeddings/concat_weigths.txt',
+                      cache = 'lamner_embeds',
+                      unk_init = torch.Tensor.normal_)
+        SRC.build_vocab(train_data, 
+				 max_size = MAX_VOCAB_SIZE, 
+				 vectors = lamner_embeds
+			   )
+        embeddings_enc1 = SRC.vocab.vectors
         model.encoder.embeddings.word_embeddings.weight.data.copy_(embeddings_enc1)
     
     
