@@ -311,6 +311,8 @@ def main():
 				 vectors = lamner_embeds
 			   )
         embeddings_enc1 = SRC.vocab.vectors
+        d = embeddings_enc1.shape[1]
+        embeddings_enc1 = torch.cat([embeddings_enc1, torch.rand(1, d).normal_()], dim=1)
         model.encoder.embeddings.word_embeddings.weight.data.copy_(embeddings_enc1)
     
     
